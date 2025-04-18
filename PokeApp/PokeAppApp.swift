@@ -6,15 +6,21 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct PokeAppApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject private var authViewModel = AuthViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
 
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            WindowGroup {
+                RootView()
+                    .environmentObject(authViewModel)
+            }
         }
-    }
 }
+

@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		460E230C2DB18CF300E0A621 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 460E230B2DB18CF300E0A621 /* FirebaseAuth */; };
+		460E230E2DB18CF300E0A621 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 460E230D2DB18CF300E0A621 /* FirebaseCore */; };
+		460E23102DB18CF300E0A621 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 460E230F2DB18CF300E0A621 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		460E22F72DB1879E00E0A621 /* PokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				460E230E2DB18CF300E0A621 /* FirebaseCore in Frameworks */,
+				460E230C2DB18CF300E0A621 /* FirebaseAuth in Frameworks */,
+				460E23102DB18CF300E0A621 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,9 @@
 			);
 			name = PokeApp;
 			packageProductDependencies = (
+				460E230B2DB18CF300E0A621 /* FirebaseAuth */,
+				460E230D2DB18CF300E0A621 /* FirebaseCore */,
+				460E230F2DB18CF300E0A621 /* FirebaseFirestore */,
 			);
 			productName = PokeApp;
 			productReference = 460E22F72DB1879E00E0A621 /* PokeApp.app */;
@@ -94,6 +106,9 @@
 			);
 			mainGroup = 460E22EE2DB1879E00E0A621;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				460E230A2DB18CF300E0A621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 460E22F82DB1879E00E0A621 /* Products */;
 			projectDirPath = "";
@@ -251,6 +266,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GM993ZR6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -278,6 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6GM993ZR6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -320,6 +337,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		460E230A2DB18CF300E0A621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		460E230B2DB18CF300E0A621 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 460E230A2DB18CF300E0A621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		460E230D2DB18CF300E0A621 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 460E230A2DB18CF300E0A621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		460E230F2DB18CF300E0A621 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 460E230A2DB18CF300E0A621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 460E22EF2DB1879E00E0A621 /* Project object */;
 }
